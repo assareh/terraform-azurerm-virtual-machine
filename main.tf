@@ -1,5 +1,10 @@
 provider "azurerm" {
   features {}
+
+  # These may also be provided as environment variables
+  # https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#argument-reference
+  subscription_id = "14692f20-9428-451b-8298-102ed4e39c2a"
+  use_msi         = true
 }
 
 resource "azurerm_resource_group" "rg" {
